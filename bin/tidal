@@ -23,6 +23,7 @@ setdir
 TIDAL_BOOT_PATH=${TIDAL_BOOT_PATH:-"$DIR/../Tidal.ghci"}
 TIDAL_TEMPO_IP=${TIDAL_TEMPO_IP:-"127.0.0.1"}
 GHCI=${GHCI:-"ghci"}
+TIDAL_MODULE_SERCH_PATH=${MODULE_SERCH_PATH:-"$HOME/tidal_modules/"}
 
 # Run GHCI and load Tidal bootstrap file
-TIDAL_TEMPO_IP=$TIDAL_TEMPO_IP $GHCI -XOverloadedStrings -ghci-script $TIDAL_BOOT_PATH "$@"
+TIDAL_TEMPO_IP=$TIDAL_TEMPO_IP $GHCI -XOverloadedStrings -i$TIDAL_MODULE_SERCH_PATH -ghci-script $TIDAL_BOOT_PATH "$@"
